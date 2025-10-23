@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PizzariaSul.Infrastructure
+namespace PizzariaSul.Application.DTOs.UsuariosDTOs
 {
-    public class PizzariaSulDbContext
+    public class LoginRequest
     {
+        public string? Celular {  get; set; }
     }
 }

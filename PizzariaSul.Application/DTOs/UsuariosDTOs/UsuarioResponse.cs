@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PizzariaSul.Domain.Entidades
+namespace PizzariaSul.Application.DTOs.UsuariosDTOs
 {
-    public class Usuario
+    public class UsuarioResponse
     {
         public int Id { get; set; }
         public string? Nome { get; set; }

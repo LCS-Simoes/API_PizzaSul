@@ -9,6 +9,8 @@ namespace PizzariaSul.Domain.Interfaces
 {
     public interface IUsuarios
     {
+        Task<Usuario> BuscarLogin(string celular);
+        Task<Usuario> BuscarId(int id);
         Task<Usuario> CadastrarUsuario(Usuario usuario);
         Task<Usuario> AtualizarUsuario(Usuario usuario, int id);
         Task<bool> DeletarUsuario(int id);
