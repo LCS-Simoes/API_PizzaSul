@@ -1,4 +1,6 @@
 
+using PizzariaSul.Infrastructure;
+
 namespace PizzariaSul.API
 {
     public class Program
@@ -13,6 +15,11 @@ namespace PizzariaSul.API
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+
+
+            //Configurações
+            builder.Services.AddInfrastructure(builder.Configuration);
+
 
             var app = builder.Build();
 
