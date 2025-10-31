@@ -1,5 +1,5 @@
-
 using PizzariaSul.Infrastructure;
+using PizzariaSul.Application.Helper;
 
 namespace PizzariaSul.API
 {
@@ -18,8 +18,9 @@ namespace PizzariaSul.API
 
 
             //Configurações
+            builder.Services.AddUseCases();
             builder.Services.AddInfrastructure(builder.Configuration);
-
+          
 
             var app = builder.Build();
 
