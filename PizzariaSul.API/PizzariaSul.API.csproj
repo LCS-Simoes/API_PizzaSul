@@ -21,10 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <ProjectReference Include="..\PizzariaSul.Application\PizzariaSul.Application.csproj" />
     <ProjectReference Include="..\PizzariaSul.Infrastructure\PizzariaSul.Infrastructure.csproj" />
   </ItemGroup>
 
