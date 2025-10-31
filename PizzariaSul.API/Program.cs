@@ -1,5 +1,6 @@
 using PizzariaSul.Infrastructure;
 using PizzariaSul.Application.Helper;
+using PizzariaSul.Application.Integracao;
 
 namespace PizzariaSul.API
 {
@@ -19,11 +20,23 @@ namespace PizzariaSul.API
 
             //Configurações
             builder.Services.AddUseCases();
+            builder.Services.AddApplicationCep();
             builder.Services.AddInfrastructure(builder.Configuration);
           
 
             var app = builder.Build();
 
+            /*Rotas
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAll", policy =>
+                {
+                    policy.AllowAnyOrigin()
+                          .AllowAnyHeader()
+                          .AllowAnyMethod();
+                });
+            });
+            */
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
             {
